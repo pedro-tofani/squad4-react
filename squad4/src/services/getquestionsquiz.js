@@ -1,4 +1,4 @@
-const questions = [
+export const questionsBase = [
   {
     question: "Por quanto tempo o corona vírus sobrevive em superfícies e objetos?",
     options: [
@@ -28,15 +28,6 @@ const questions = [
     correct: 3,
   }, {
     question: "Todos estes fazem parte do grupo de risco para infecção por COVID-19, EXCETO:",
-    options: [
-      "Quem tem sinusite e rinite, alérgicas ou crônicas",
-      "Diabéticos",
-      "Quem tem insuficiência renal crônica, idosos",
-      "Quem tem doença respiratória crônica",
-    ],
-    correct: 1,
-  }, {
-    question: "Por quanto tempo o corona vírus sobrevive em superfícies e objetos:",
     options: [
       "Quem tem sinusite e rinite, alérgicas ou crônicas",
       "Diabéticos",
@@ -118,7 +109,3 @@ const questions = [
     correct: 2
   }
 ];
-
-export const generateRandom = (questions) => {
-  runningQuestion = Math.floor(Math.random() * (questions.length-1));
-}
