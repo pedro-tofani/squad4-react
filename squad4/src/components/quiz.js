@@ -23,7 +23,8 @@ class Quiz extends Component {
   }
 
   validAnswer(i, validAnswer, n, s) {
-    console.log(i, validAnswer)
+    console.log(i, validAnswer);
+
     if (i === validAnswer - 1) this.setState({ nQuestion: n + 1, score: s + 25 })
   }
 
@@ -37,7 +38,7 @@ class Quiz extends Component {
         {questions[nQuestion][0].question}
         <ul>
           {questions[nQuestion][0].options.map((q, index) =>
-            <li onClick={() => this.validAnswer(index, questions[nQuestion][0].correct, nQuestion, score)}>{q}</li>
+            <button onClick={() => this.validAnswer(index, questions[nQuestion][0].correct, nQuestion, score)}>{q}</button>
           )}
         </ul>
       </div>
