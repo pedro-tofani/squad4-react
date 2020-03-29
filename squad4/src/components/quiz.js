@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { questionsBase } from '../services/getquestionsquiz';
+import '../quiz.css';
 
 class Quiz extends Component {
 
@@ -7,15 +8,14 @@ class Quiz extends Component {
     super(props);
     this.state = {
       nQuestion: 0,
-      score: 0,
       questions: [],
       endGame: false,
-      wrongAnswers: []
+      wrongAnswers: [],
+      initGame: false,
     };
   }
 
   componentDidMount() {
-    console.log(questionsBase)
     const newQuestions = [];
     for (let i = 0; i < 4; i += 1) {
       let randomNumber = Math.floor(Math.random() * (questionsBase.length - 1));
@@ -24,48 +24,60 @@ class Quiz extends Component {
     this.setState({ questions: newQuestions })
   }
 
-  validAnswer(i, validAnswer, n) {
-    console.log(i, validAnswer);
+  validAnswer(i, validAnswer, n, s) {
     const { wrongAnswers } = this.state;
     const { questions, nQuestion } = this.state;
     if (i !== validAnswer - 1) {
       const newPush = [...wrongAnswers];
       newPush.push(questions[nQuestion][0])
-      this.setState({ wrongAnswers: newPush, })
+      this.setState({ wrongAnswers: newPush, nQuestion: nQuestion + 1 })
     }
-    this.setState({nQuestion: nQuestion + 1})
+    this.setState({ nQuestion: nQuestion + 1 })
     if (n === 3) this.setState({ endGame: true })
   }
 
+  restart() {
+    document.location.reload(true);
+  }
+
+  gamestart() {
+    this.setState({ initGame: true });
+  }
+
   render() {
-    console.log(this.state);
-    const { questions, nQuestion, score, endGame, wrongAnswers } = this.state;
+    const { questions, nQuestion, endGame, wrongAnswers, initGame } = this.state;
+    if (!initGame) return (
+      <div className="container">
+        <button className="playAgain" onClick={() => this.gamestart()}>Jogar!</button>
+      </div>
+    )
     if (!questions.length) return <div>Loading...</div>
     if (endGame) return (
-      <div>
+      <div className="container">
         {wrongAnswers.map(ans => {
           return (
-            <div>
-              <p>{ans.question}</p>
-              <p>{ans.options[ans.correct - 1]}</p>
-              <p>{ans.explanation}</p>
+            <div key={ans.question}>
+              <p className="gameOver">{ans.question}</p>
+              <p className="gameOver">{ans.options[ans.correct - 1]}</p>
+              <p className="gameOver">{ans.explanation}</p>
             </div>
           )
         })}
+        <button className="playAgain" onClick={() => this.restart()}>Jogar novamente!</button>
       </div>
     )
-    console.log(questions[0]);
     return (
-      <div>
-        {questions[nQuestion][0].question}
-        <ul>
+      <div className="container">
+        <h2 id="question">
+          {questions[nQuestion][0].question}
+        </h2>
+        <ul className="choices">
           {questions[nQuestion][0].options.map((q, index) =>
-            <button onClick={() => this.validAnswer(index, questions[nQuestion][0].correct, nQuestion)}>{q}</button>
+            <button key={q} className="choice" onClick={() => this.validAnswer(index, questions[nQuestion][0].correct, nQuestion)}>{q}</button>
           )}
         </ul>
       </div>
     )
   }
 }
-
 export default Quiz;

@@ -1,0 +1,89 @@
+body {
+  font-size: 20px;
+  font-family: monospace;
+}
+
+.container {
+  padding: 100px 50px;
+  margin: 20px auto;
+  background-color: white;
+  height: 600px;
+  width: 70%;
+  border-radius: 50px;
+  box-shadow: 0px 5px 15px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('./img/virus.jpg');
+  background-size: cover;
+  overflow: auto;
+}
+
+.question {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  font-weight: bolder;
+}
+
+.choices {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.choice {
+  margin: 10px auto;
+  display: inline-block;
+  width: 95%;
+  text-align: center;
+  border: 2px solid rgb(0, 80, 0);
+  background-color: rgba(0, 40, 0, 0.5);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 1em;
+  color: white;
+  font-weight: bolder;
+}
+
+.choice:hover {
+  background-color: rgba(0, 40, 0, 0.75);
+  border: 3px solid white;
+  font-weight: bold;
+}
+
+.gameOver {
+  font-size: 1.5em;
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.playAgain{
+  padding: 10px;
+  font-size: 1em;
+  font-weight: bolder;
+  word-break: break-all;
+  width:300px;
+  border : 2px solid white;
+  text-align: center;
+  cursor: pointer;
+  color : white;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
+.playAgain:hover{
+  border: 3px solid white;
+  color : white;
+}

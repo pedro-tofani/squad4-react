@@ -1,10 +1,14 @@
 import React from 'react';
 import Quiz from './components/quiz';
+import Prevention from './components/prevention';
 import './App.css';
 
 function App() {
   return (
-    <Quiz />
+    <div>
+      <Prevention />
+      <Quiz />
+    </div>
   );
 }
 
