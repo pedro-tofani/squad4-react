@@ -8,6 +8,7 @@ export const questionsBase = [
       "Até 1 Mês",
     ],
     correct: 2,
+    explanation: 'Um estudo publicado na terça-feira (17) na revista científica "New England Journal of Medicine" afirma que o coronavírus responsável pela doença Covid-19 consegue sobreviver até 3 dias em algumas superfícies, como plástico ou aço. ',
   }, {
     question: "O uso de máscaras é recomendado para:",
     options: [
@@ -17,6 +18,7 @@ export const questionsBase = [
       "Pessoas infectadas.",
     ],
     correct: 4,
+    explanation: 'Pessoas sem sintomas respiratórios, como tosse, não precisam usar máscara médica. A OMS recomenda o uso de máscaras para pessoas com sintomas de COVID-19 e para aqueles que cuidam de indivíduos com sintomas, como tosse e febre. O uso de máscaras é crucial para os profissionais de saúde e as pessoas que cuidam de alguém (em casa ou em um estabelecimento de saúde). A OMS recomenda o uso racional de máscaras médicas para evitar o desperdício desnecessário de recursos preciosos.',
   }, {
     question: "Ao espirrar ou tossir repentinamente, qual o procedimento mais adequado?",
     options: [
@@ -26,6 +28,7 @@ export const questionsBase = [
       "Tentar sempre segurar a tosse e o espirro para não contaminar ninguém.",
     ],
     correct: 3,
+    explanation: "As secreções contidas nas gotículas da tosse ou do espirro contém quantidades significativas de bactérias  e/ou vírus que podem sobreviver por tempo suficiente até o contágio de uma nova pessoa.",
   }, {
     question: "Todos estes fazem parte do grupo de risco para infecção por COVID-19, EXCETO:",
     options: [
@@ -35,6 +38,7 @@ export const questionsBase = [
       "Quem tem doença respiratória crônica",
     ],
     correct: 1,
+    explanation: "Pessoas com doenças crônicas estão em maior risco por causa do comprometimento da resposta imune.",
   }, {
     question: "Caso seja necessário ir a mercado, farmácia ou qualquer outro ambiente com aglomeração social, devo tomar as seguintes precauções, exceto:",
     options: [
@@ -44,6 +48,7 @@ export const questionsBase = [
       "Usar máscara caso esteja com sintomas semelhantes aos do corona.",
     ],
     correct: 1,
+    explanation: 'O ministério da saúde orienta a manter uma distância de no mínimo dois metros na fila, caso os clientes não tenham máscara, ou de um metro, se estiverem usando, para diminuir o risco de contágio.',
   }, {
     question: "Qual o período de incubação do coronavírus – tempo para os primeiros sintomas aparecerem?",
     options: [
@@ -53,6 +58,7 @@ export const questionsBase = [
       "Indefinido.",
     ],
     correct: 3,
+    explanation: 'Período de incubação é o tempo que leva para os primeiros sintomas aparecerem desde a infecção por coronavírus, que pode ser de 2 a 14 dias.',
   }, {
     question: "Qual o primeiro passo para começar a lavar as mãos?",
     options: [
@@ -62,6 +68,7 @@ export const questionsBase = [
       "Ver se suas mãos estão sujas, em caso negativo, não lavar as mãos",
     ],
     correct: 1,
+    explanation: 'Qual é o jeito certo de lavar a mão? Primeiro, eu umedeço as mãos com uma quantidade boa de sabão. Qualquer sabão serve, não precisa ser sabonete especial.',
   }, {
     question: "Por se tratar de um vírus que tem a capacidade de se manter suspenso no ar, qual é a recomendação para ambientes de convívio :",
     options: [
@@ -70,7 +77,8 @@ export const questionsBase = [
       "Manter as janelas abertas sempre que possível.",
       "Evitar que tenham muitas pessoas no mesmo cômodo.",
     ],
-    correct: 3
+    correct: 3,
+    explanation : "É importante manter uma boa circulação de ar no ambiente comum, para diminuir a chance de contaminação.",
   }, {
     question: "Todas são formas de transmissão do novo coronavirus, exceto:",
     options: [
@@ -79,7 +87,8 @@ export const questionsBase = [
       "Toque",
       "Objetos e superfícies contaminadas",
     ],
-    correct: 1
+    correct: 1,
+    explanation : "Não existe nenhum registro de contaminação devido a animais domésticos, a contaminação se da pelo ar ou por levar a mão sem higienização até o rosto.",
   }, {
     question: "Qual a melhor forma de cumprimentar seu amigo?",
     options: [
@@ -89,6 +98,7 @@ export const questionsBase = [
       "Acenar de longe",
     ],
     correct: 4,
+    explanation : "É preciso manter um distanciamento de ao menos 2 metros, para evitar a contaminação.",
   }, {
     question: "Depois de tocar em superfícies como maçaneta ou apoio do onibus, é recomendado fazer o quê?",
     options: [
@@ -97,7 +107,8 @@ export const questionsBase = [
       "Esfregar uma mão na outra para matar o vírus com o atrito",
       "Nada, não há perigo nenhum nisso",
     ],
-    correct: 3
+    correct: 3,
+    explanation : "É importante nesse caso evitar de levar as mãos no rosto antes de higienizar as mãos.",
   }, {
     question: "Qual o processo de lavar as mãos eu não devo aplicar?",
     options: [
@@ -106,6 +117,7 @@ export const questionsBase = [
       "Aplique na palma da mão quantidade suficiente de sabonete líquido para cobrir todas as superfícies das mãos",
       "Seque as mãos com papel-toalha descartável, iniciando pelas mãos e seguindo pelos punhos.",
     ],
-    correct: 2
+    correct: 2,
+    explanation : "Ao terminar de lavar as mãos é necessário tirar os resíduos de sabão com o papel ou toalha e depois fechar a torneira.",
   }
 ];

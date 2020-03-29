@@ -8,7 +8,9 @@ class Quiz extends Component {
     this.state = {
       nQuestion: 0,
       score: 0,
-      questions: []
+      questions: [],
+      endGame: false,
+      wrongAnswers: []
     };
   }
 
@@ -22,16 +24,23 @@ class Quiz extends Component {
     this.setState({ questions: newQuestions })
   }
 
-  validAnswer(i, validAnswer, n, s) {
+  validAnswer(i, validAnswer, n) {
     console.log(i, validAnswer);
-
-    if (i === validAnswer - 1) this.setState({ nQuestion: n + 1, score: s + 25 })
+    const { wrongAnswers } = this.state;
+    const { questions, nQuestion } = this.state;
+    if (i !== validAnswer - 1) {
+      const newPush = [...wrongAnswers];
+      newPush.push(questions[nQuestion][0])
+      this.setState({ wrongAnswers: newPush, nQuestion: nQuestion + 1 })
+    }
+    if (n === 3) this.setState({ endGame: true })
   }
 
   render() {
     console.log(this.state);
-    const { questions, nQuestion, score } = this.state;
+    const { questions, nQuestion, score, endGame } = this.state;
     if (!questions.length) return <div>Loading...</div>
+    if (endGame) return <p>Fim de jogo</p>
     console.log(questions[0]);
     return (
       <div>
