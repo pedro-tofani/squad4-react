@@ -107,7 +107,7 @@ export const questionsBase = [
       "Esfregar uma mão na outra para matar o vírus com o atrito",
       "Nada, não há perigo nenhum nisso",
     ],
-    correct: 3,
+    correct: 2,
     explanation : "É importante nesse caso evitar de levar as mãos no rosto antes de higienizar as mãos.",
   }, {
     question: "Qual o processo de lavar as mãos eu não devo aplicar?",

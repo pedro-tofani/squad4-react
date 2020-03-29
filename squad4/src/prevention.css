@@ -75,22 +75,6 @@
     font-size: 20px;
     font-family: monospace;
   }
-  #container {
-    padding: 100px 50px 150px 50px;
-    margin: 20px auto;
-    background-color: white;
-    height: 700px;
-    width: 100%;
-    border-radius: 50px;
-    box-shadow: 0px 5px 15px 0px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* background-image: url("../img/virus.jpg"); */
-    background-size: cover;
-  }
   #start {
     font-size: 1.5em;
     font-weight: bolder;
@@ -121,12 +105,12 @@
     height: 200px;
     border-top-left-radius: 5px;
   }
-  #question {
+  .question {
     display: flex;
     align-content: center;
     justify-content: center;
   }
-  #question p {
+  .question p {
     margin: 0;
     padding: 15px;
     font-size: 1.25em;
@@ -144,7 +128,6 @@
     display: inline-block;
     width: 95%;
     text-align: center;
-    border: 2px solid rgb(0, 80, 0);
     background-color: rgba(0, 40, 0, 0.5);
     color: white;
     border-radius: 5px;

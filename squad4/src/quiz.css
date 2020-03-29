@@ -41,7 +41,7 @@ body {
   display: inline-block;
   width: 95%;
   text-align: center;
-  border: 2px solid rgb(0, 80, 0);
+  border: 2px solid;
   background-color: rgba(0, 40, 0, 0.5);
   color: white;
   border-radius: 5px;
@@ -69,21 +69,29 @@ body {
   margin-top: 25px;
 }
 
-.playAgain{
+.playAgain {
   padding: 10px;
   font-size: 1em;
   font-weight: bolder;
   word-break: break-all;
-  width:300px;
-  border : 2px solid white;
+  width: 300px;
+  border: 2px solid white;
   text-align: center;
   cursor: pointer;
-  color : white;
-  background-color: rgba(0,0,0,0.2);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
 
-.playAgain:hover{
+.playAgain:hover {
   border: 3px solid white;
-  color : white;
+  color: white;
+}
+
+.green-border-quiz {
+  border: 2px solid green;
+}
+
+.red-border-quiz {
+  border: 2px solid red;
 }

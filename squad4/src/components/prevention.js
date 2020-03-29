@@ -25,7 +25,7 @@ class Prevention extends Component {
                 bem as mãos (dedos, unhas, punho, palma e dorso) com água e sabão, e, de preferência, utilizar toalhas de
                 papel para secá-las.
             Além do sabão, outro produto indicado para higienizar as mãos é o álcool gel 70%.</p>
-              <a className="texto" target="_blank" href="https://www.youtube.com/watch?v=pt_zybIl7M4">Video</a>
+              <a className="texto" rel='noopener noreferrer' target="_blank" href="https://www.youtube.com/watch?v=pt_zybIl7M4">Video</a>
             </div>
           </div>
         </section>
